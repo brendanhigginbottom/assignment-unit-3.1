@@ -92,11 +92,17 @@ console.log(favoriteFoods);
 
 // 4.f (STRETCH) TODO: Sort your favoriteFoods array
 //     in reverse alphabetical order. Log the array.
+    /*favoriteFoods = favoriteFoods.sort();
+    favoriteFoods = favoriteFoods.reverse();
+    console.log(favoriteFoods); */
+    // attempted to combine the commented out code above into one line - seems to work!
+    favoriteFoods = favoriteFoods.reverse(favoriteFoods.sort());
+    console.log(favoriteFoods);
 
 // 4.g (STRETCH) TODO: Convert your array to a string
 //     putting the word "and" between each item.
 //     eg "tacos and pizza and pasta". Log the string.
-//Create an array whose value is the output of calling .join method on
+//Create a string whose value is the output of calling .join method on
 // the array favoriteFoods and then logged it
 let favoriteFoodsString = favoriteFoods.join(' and ');
 console.log(favoriteFoodsString);
@@ -107,5 +113,12 @@ console.log(favoriteFoodsString);
 //     It should look something like:
 //     ['pizza', 'pasta', 'fish', 'cat', 'bird', 'dog']
 
+/* This kind of works?
+
 let foodAndAnimals = animalArray + favoriteFoods;
 console.log('My favorite animals and foods are', foodAndAnimals);
+
+*/
+
+let combinedArray = favoriteFoods.concat(animalArray);
+console.log(combinedArray);
